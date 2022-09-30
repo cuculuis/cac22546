@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.nav__logo__img {
+    width: 30%;
+}
+
+.nav__logo {
+    font-size: 2rem;
+}
+
+.img__carousel {
+    height:60rem;
+    object-fit: cover;
+}
+
+.nav__nav__link {
+    font-size: 1.6rem;
+    color: hsl(0, 0%, 100%);
+}
