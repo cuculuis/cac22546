@@ -23,22 +23,23 @@
     <header class="container-fluid cabecita">
 
         <!--Barra de navegacion-->
-        <nav class="container-fluid navbar navbar-expand-lg nav__barra">
+        <nav class="container-fluid navbar navbar-expand-lg">
 
             <!--Div que contiene el logo y el nombre-->
             <div class="container-fluid">
-                <a class="navbar-brand nav__logo" href="#">
-                    <img src="./assets/codoacodo.png" alt="Logo" class="d-inline-block nav__logo__img">
-                    <span>
-                        Conf Bs As
-                    </span>
-                </a>
+                <div class="nav__brand justify-content-space-between">
+                    <a class="navbar-brand nav__logo" href="#">
+                        <img src="./assets/codoacodo.png" alt="Logo" class="d-inline-block nav__logo__img">
+                        <span>
+                            Conf Bs As
+                        </span>
+                    </a>
+                    <!--Boton de emparedado en dispositivos mas pequeños-->
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
                 
-                <!--Boton de emparedado en dispositivos mas pequeños-->
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                </button>
-    
                 <!--Links de navegación-->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
@@ -59,6 +60,7 @@
                         </li>
                     </ul>
                 </div>
+    
             </div>
         </nav>
     </header>
@@ -80,29 +82,37 @@
                 <div class="carousel-inner">
                     
                     <!--Primer item-->
-                    <div class="carousel-item active">
+                    <div class="carousel-item carrusel__div active">
                         <img src="./assets/ba1.jpg" class="d-block w-100 img__carrusel" alt="Buenos Aires">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                        <div class="carousel-caption d-md-block info__carrusel text-end">
+                            <div>
+                                <h2 class="carrusel__titulo">Conf Bs As</h5>
+                                <p class="d-none d-sm-none d-md-block">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comumidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. ¡Te esperamos!</p>
+                                <a href="#" class="btn btn-outline-light">¡Quiero ser orador!</a>
+                                <a href="#" class="btn btn-success">Comprar tickets</a>
+                            </div>
                         </div>
                     </div>
 
                     <!--Segundo item-->
-                    <div class="carousel-item">
+                    <div class="carousel-item carrusel__div">
                         <img src="./assets/ba2.jpg" class="d-block w-100 img__carrusel" alt="Buenos Aires 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                        <div class="carousel-caption d-md-block info__carrusel text-start">
+                            <h2 class="carrusel__titulo">Conf Bs As</h5>
+                                <p class="d-none d-sm-none d-md-block">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comumidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. ¡Te esperamos!</p>
+                                <a href="#" class="btn btn-outline-light">¡Quiero ser orador!</a>
+                                <a href="#" class="btn btn-success">Comprar tickets</a>
                         </div>
                     </div>
 
                     <!--Tercer item-->
-                    <div class="carousel-item">
+                    <div class="carousel-item carrusel__div">
                         <img src="./assets/ba3.jpg" class="d-block w-100 img__carrusel" alt="Buenos Aires 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                        <div class="carousel-caption d-md-block info__carrusel text-center">
+                            <h2 class="carrusel__titulo">Conf Bs As</h5>
+                                <p class="d-none d-sm-none d-md-block">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comumidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. ¡Te esperamos!</p>
+                                <a href="#" class="btn btn-outline-light">¡Quiero ser orador!</a>
+                                <a href="#" class="btn btn-success">Comprar tickets</a>
                         </div>
                     </div>
                 </div>
@@ -131,33 +141,33 @@
 
             <div class="row oradores__lista">
                 <!--Primer Orador-->
-                <div class="card border-light col-6 col-md-4 ">
+                <div class="card orador border-light col-6 col-md-4 ">
                     <img src="./assets/steve.jpg" class="card-img-top" alt="Steve Jobs">
                     <div class="card-body">
-                        <span class="badge text-bg-warning">JavaScript</span>
-                        <span class="badge bg-info">React</span>
-                        <h5 class="card-title">Steve Jobs</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <span class="badge text-bg-warning oradores__hab">JavaScript</span>
+                        <span class="badge bg-info oradores__hab">React</span>
+                        <h5 class="card-title oradores__nombre">Steve Jobs</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dignissimos deserunt dolores, obcaecati nostrum rerum maiores vero labore ex! Eaque corporis sed placeat omnis ex excepturi, eum minus ea officiis.</p>
                     </div>
                 </div>
                 <!--Segundo Orador-->
-                <div class="card border-light col-6 col-md-4">
+                <div class="card orador border-light col-6 col-md-4">
                     <img src="./assets/bill.jpg" class="card-img-top" alt="Bill Gates">
                     <div class="card-body">
-                        <span class="badge text-bg-warning">JavaScript</span>
-                        <span class="badge bg-info">React</span>
-                        <h5 class="card-title ">Bill Gates</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <span class="badge text-bg-warning oradores__hab">JavaScript</span>
+                        <span class="badge bg-info oradores__hab">React</span>
+                        <h5 class="card-title oradores__nombre">Bill Gates</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius amet voluptatum quisquam incidunt maiores suscipit autem, perspiciatis ex sapiente aut laboriosam fugiat non dolore eaque quae veritatis! Ipsam, amet.</p>
                     </div>
                 </div>
                 <!--Tercer Orador-->
-                <div class="card border-light col-6 col-md-4">
+                <div class="card orador border-light col-6 col-md-4">
                     <img src="./assets/ada.jpeg" class="card-img-top" alt="Ada Lovelace">
                     <div class="card-body">
-                        <span class="badge bg-secondary">Negocios</span>
-                        <span class="badge bg-danger">Startups</span>
-                        <h5 class="card-title">Ada Lovelace</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <span class="badge bg-secondary oradores__hab">Negocios</span>
+                        <span class="badge bg-danger oradores__hab">Startups</span>
+                        <h5 class="card-title oradores__nombre">Ada Lovelace</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti amet magni cupiditate possimus repellat reiciendis voluptatem, dolorum, temporibus natus accusantium quo quae! Repellat beatae, neque facilis esse quas similique ipsa..</p>
                     </div>
                 </div>
             </div>
@@ -167,12 +177,12 @@
         <div class="card text-bg-dark mb-3">
             <div class="row g-0">
                 <div class="col-md-6">
-                    <img src="./assets/honolulu.jpg" class="img-fluid rounded-start" alt="Hawaii">
+                    <img src="./assets/honolulu.jpg" class="img-fluid rounded-start honolulu__img" alt="Hawaii">
                 </div>
             
-                <div class="col-md-6">
+                <div class="col-md-6 honolulu__info">
                     <div class="card-body">
-                        <h5 class="card-title">Bs As - Octubre</h5>
+                        <h5 class="card-title honolulu__titulo">Bs As - Octubre</h5>
                         <p class="card-text">Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa suereste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km^2 de superficie).</p>
                         <a href="#" class="btn btn-outline-light">Conocé más</a>
                     </div>

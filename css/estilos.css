@@ -11,11 +11,11 @@ html {
 }
 
 /*VALORES QUE QUIERO QUE SEAN PREDETERMINADOS*/
-p {
+p, a {
     font-size: 1.6rem;
 }
 
-label, button, .form__texto {
+label, a, button, .form__texto {
     font-size: 1.4rem;
 }
 
@@ -40,11 +40,72 @@ label, button, .form__texto {
     font-size: 2rem;
     color: #fff;
 }
+/*KEYFRAME PARA ANIMAR EL NAVBAR*/
+    @-webkit-keyframes rebota {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+                transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+                transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+                transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+                transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+                transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+}
+    @keyframes rebota {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+                transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+                transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+                transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+                transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+                transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+}
 
-/*SECCION DE CARRUSEL*/
-.img__carrusel {
-    height:60rem;
-    object-fit: cover;
+.nav__nav__link:hover {
+	-webkit-animation: rebota 0.9s both;
+            animation: rebota 0.9s both;
+            color: yellow;
 }
 
 .nav__nav__link {
@@ -52,9 +113,25 @@ label, button, .form__texto {
     color: hsl(0, 0%, 100%);
 }
 
+/*SECCION DE CARRUSEL*/
+.carrusel__div {
+    background-color: #000;
+}
+
+.img__carrusel {
+    height:60rem;
+    opacity: 0.5;
+    object-fit: cover;
+}
+
+.carrusel__titulo {
+    font-size: 3rem;
+}
+
 /* ORADORES */
 .oradores__lista {
     font-size: 1.6rem;
+    justify-content: center;
 }
 
 .titulo__oradores h4{
@@ -66,6 +143,49 @@ label, button, .form__texto {
     font-size: 3rem;
     font-weight: 600;
 }
+
+    @-webkit-keyframes sombrita {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+    @keyframes sombrita {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+.orador:hover {
+    -webkit-animation: sombrita 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: sombrita 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.oradores__nombre {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/*SECCION HONOLULU*/
+.honolulu__img{
+    object-fit: cover;
+}
+
+.honolulu__titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
 
 /*FORMULARIO*/
 .titulo__formulario h5 {
@@ -98,6 +218,12 @@ label, button, .form__texto {
 @media only screen and (max-width:768px) {
     /* BARRA DE NAVEGACIÓN */
 
+    .nav__brand {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .nav__logo {
         font-size: 1.6rem;
         color: #fff;
@@ -107,10 +233,29 @@ label, button, .form__texto {
     .img__carrusel {
         height: 70vh;
     }
+
+    /*SECCION HONOLULU*/
+    .honolulu__img{
+        object-fit: cover;
+    }
+
+    .honolulu__titulo {
+        font-size: 2rem;
+    }
+
+    .honolulu__info p {
+    font-size: 1.3rem;
+    }
 }
 
 @media only screen and (max-width:430px) {
     /* BARRA DE NAVEGACIÓN */
+
+    .nav__brand {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        justify-content: space-between;
+    }
 
     .nav__logo__img {
         width: 25%;
@@ -124,5 +269,23 @@ label, button, .form__texto {
     /*CARRUSEL*/
     .img__carrusel {
         height: 50vh;
+    }
+
+    .carrusel__titulo {
+        font-size: 2rem;
+    }
+
+    /*ORADORES*/
+    .oradores__hab {
+        font-size: 1rem;
+    }
+
+    .oradores__nombre {
+        font-size: 1.6rem;
+    }
+
+    .oradores__lista p {
+        font-size: 1.3rem;
+        justify-content: center;
     }
 }
