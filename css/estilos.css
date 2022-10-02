@@ -1,3 +1,4 @@
+/*RESETS BASICOS*/
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +10,39 @@ html {
     font-size: 62.5%;
 }
 
+/*VALORES QUE QUIERO QUE SEAN PREDETERMINADOS*/
+p {
+    font-size: 1.6rem;
+}
+
+label, button, .form__texto {
+    font-size: 1.4rem;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.cabecita {
+    background: rgb(2,0,36);
+    background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(5,4,77,1) 19%, rgba(9,9,121,1) 38%, rgba(22,65,128,1) 63%, rgba(6,85,166,1) 84%, rgba(16,98,152,1) 89%, rgba(0,103,148,1) 95%, rgba(7,102,131,1) 98%, rgba(7,83,98,1) 100%);
+}
+
+.nav__barra {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+}
+
 .nav__logo__img {
     width: 30%;
 }
 
 .nav__logo {
     font-size: 2rem;
+    color: #fff;
 }
 
-.img__carousel {
+/*SECCION DE CARRUSEL*/
+.img__carrusel {
     height:60rem;
     object-fit: cover;
 }
@@ -25,4 +50,79 @@ html {
 .nav__nav__link {
     font-size: 1.6rem;
     color: hsl(0, 0%, 100%);
+}
+
+/* ORADORES */
+.oradores__lista {
+    font-size: 1.6rem;
+}
+
+.titulo__oradores h4{
+    font-size: 1.2rem;
+    font-weight: 10;
+}
+
+.titulo__oradores h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/*FORMULARIO*/
+.titulo__formulario h5 {
+    font-size: 1.2rem;
+}
+
+.titulo__formulario h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/*PIE DE PAGINA O FOOTER PARA LOS PANAS*/
+.piecito{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,4,77,1) 19%, rgba(9,9,121,1) 38%, rgba(6,69,160,1) 63%, rgba(5,88,173,1) 84%, rgba(4,119,194,1) 89%, rgba(2,150,214,1) 95%, rgba(1,179,233,1) 98%, rgba(0,212,255,1) 100%);
+}
+
+.piecito ul li a{
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: 500; }
+
+.piecito ul li a:hover {
+    color: rgb(255, 255, 0);
+}
+
+/*MEDIA QUERYS*/
+
+@media only screen and (max-width:768px) {
+    /* BARRA DE NAVEGACIÓN */
+
+    .nav__logo {
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    /*CARRUSEL*/
+    .img__carrusel {
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-width:430px) {
+    /* BARRA DE NAVEGACIÓN */
+
+    .nav__logo__img {
+        width: 25%;
+    }
+
+    .nav__logo {
+        font-size: 1.3rem;
+        color: #fff;
+    }
+
+    /*CARRUSEL*/
+    .img__carrusel {
+        height: 50vh;
+    }
 }
