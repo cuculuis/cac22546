@@ -102,7 +102,7 @@ label, a, button, .form__texto {
     }
 }
 
-.nav__nav__link:hover {
+.nav__nav__link:hover, .nav__nav__link__activo:hover {
 	-webkit-animation: rebota 0.9s both;
             animation: rebota 0.9s both;
             color: yellow;
@@ -111,6 +111,11 @@ label, a, button, .form__texto {
 .nav__nav__link {
     font-size: 1.6rem;
     color: hsl(0, 0%, 100%);
+}
+
+.nav__nav__link__activo {
+    font-size: 1.6rem;
+    color:rgb(255, 123, 0)
 }
 
 /*SECCION DE CARRUSEL*/
@@ -211,6 +216,28 @@ label, a, button, .form__texto {
 
 .piecito ul li a:hover {
     color: rgb(255, 255, 0);
+}
+
+
+/*PAGINA DE CONVIERTETE EN ORADOR*/
+
+/*SECCIÓN DE OFERTAS*/
+.des__estudiante {
+    width: 25rem;
+    border-color: rgb(0, 153, 255);
+    border-width: 3px;
+}
+
+.des__trainee {
+    width: 25rem;
+    border-color: rgba(0,103,148,1);
+    border-width: 3px;
+}
+
+.des__junior {
+    width: 25rem;
+    border-color: rgb(255, 123, 0);
+    border-width: 3px;
 }
 
 /*MEDIA QUERYS*/
